@@ -18,9 +18,9 @@ function App() {
       <Router>
         <div id="container">
           <Routes>
-            <Route path="/" element={<Web show={show} changeShow={changeShow} />}/>
-            <Route path="Register" element={<Register show={show} changeShow={changeShow} />}/>
-            <Route path="/Profile" element={<ProfileUser />} />
+            <Route path="/" element={<Web show={show} changeShow={changeShow} />} />
+            <Route path="Register" element={<Register show={show} changeShow={changeShow} />} />
+            <Route path="/profile" element={<ProfileUser />} />
           </Routes>
         </div>
       </Router>

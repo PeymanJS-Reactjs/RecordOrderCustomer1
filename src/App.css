@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Noto+Sans+Arabic:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 * {
@@ -15,8 +19,8 @@ h5,
 h6,
 p,
 span {
-  padding: 0 ;
-  margin: 0 ;
+  padding: 0;
+  margin: 0;
 }
 
 button {
@@ -652,7 +656,7 @@ img {
   height: 40px;
 }
 .off:nth-child(3) .wapper .btn {
-      top: 85px;
+  top: 85px;
 }
 .off .wapper p {
   color: #edf2ee;
@@ -676,49 +680,49 @@ img {
   height: 100% !important;
 }
 
-.started , .fresh{
+.started,
+.fresh {
   position: relative;
   top: 50px;
   display: flex;
   justify-content: center;
 }
 
-.started span , .fresh span{
+.started span,
+.fresh span {
   font-size: 18px;
   font-weight: 400;
 }
 
-.started span:nth-child(1){
+.started span:nth-child(1) {
   padding-right: 10px !important;
 }
 
-.fresh span:nth-child(1){
+.fresh span:nth-child(1) {
   padding-right: 10px !important;
 }
 
-
-.fresh span:nth-child(2){
-      background-color: #1a1a1a;
-    color: #ff8a00;
-    padding: 10px;
-    border-radius: 10px;
-    align-self: flex-start;
-    position: relative;
-    top: -8px;
+.fresh span:nth-child(2) {
+  background-color: #1a1a1a;
+  color: #ff8a00;
+  padding: 10px;
+  border-radius: 10px;
+  align-self: flex-start;
+  position: relative;
+  top: -8px;
 }
 
-
-#Comment{
+#Comment {
   margin: 100px 0;
 }
 
-#Comment .slides-container{
+#Comment .slides-container {
   width: 100%;
   position: relative;
   margin: auto;
 }
 
-.mySlides{
+.mySlides {
   display: none;
 }
 
@@ -732,16 +736,16 @@ img {
 }
 
 /* Register page */
-.contentDiv{
+.contentDiv {
   width: 100%;
   /* position: fixed; */
 }
 
-.backgroundDiv{
+.backgroundDiv {
   background-color: #8f8f8f;
   opacity: 0.9;
   position: fixed;
-  width: 100%; 
+  width: 100%;
   height: 100vh;
   top: 0;
   left: 0;
@@ -749,22 +753,22 @@ img {
   display: flex;
   justify-content: space-evenly;
 }
-.backgroundDiv .link{
+.backgroundDiv .link {
   position: absolute;
   top: 10px;
-   left: 95%;
-   font-size: 30px;
-   color: #ffffff;
-   cursor: pointer;
-   z-index: 102;
+  left: 95%;
+  font-size: 30px;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 102;
 }
-.contentDiv .fixed{
+.contentDiv .fixed {
   position: fixed;
   z-index: 1000;
   display: block;
   width: 100%;
 }
-.containerDiv{
+.containerDiv {
   width: 480px;
   height: 600px;
   margin: 0 auto;
@@ -772,57 +776,56 @@ img {
   /* z-index: 2; */
 }
 
-.containerDiv{
+.containerDiv {
   width: 480px;
   height: 600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-position: relative;
+  position: relative;
 }
 
-.headerRegister{
+.headerRegister {
   margin: 0 auto;
   width: 320px;
   height: 90px;
 }
 
-.headerRegister h2{
-  color: #1F41BB;
+.headerRegister h2 {
+  color: #1f41bb;
   text-align: center;
   font-weight: 700;
-
 }
-.headerRegister p{
+.headerRegister p {
   color: rgb(255, 255, 255) !important;
   text-align: center;
   padding-top: 10px;
   font-weight: 700;
 }
 
-.formRegister{
-  
+.formRegister {
 }
-.formRegister form{
+.formRegister form {
   width: 100%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.buttonForm{
+.buttonForm {
   width: 100%;
 }
 
-.control_form{
+.control_form {
   position: relative;
   margin: 35px 0;
 }
-.control_form:focus-within label,.control_form input:not(:placeholder-shown)+ label{
- top: -45%;
- font-size: 12px;
- opacity: 0.7;
+.control_form:focus-within label,
+.control_form input:not(:placeholder-shown) + label {
+  top: -45%;
+  font-size: 12px;
+  opacity: 0.7;
 }
-.control_form label{
+.control_form label {
   position: absolute;
   left: 5%;
   top: 30%;
@@ -830,31 +833,31 @@ position: relative;
   opacity: 0.1;
 }
 
-.control_form input{
+.control_form input {
   border: none;
   padding: 15px;
   border-radius: 5px;
-  background-color: #F1F4FF;
+  background-color: #f1f4ff;
   color: #626262;
 }
 
-.buttonForm{
+.buttonForm {
   background-color: #3d5fdb;
-  color: #FFFF;
+  color: #ffff;
   padding: 15px;
   text-align: center;
   width: 200px;
   border-radius: 5px;
 }
 
-#buttonLogin{
+#buttonLogin {
   display: flex;
   justify-content: center;
   text-align: center;
   margin: auto;
 }
 
-.alreadyAccount{
+.alreadyAccount {
   background-color: transparent;
   border: none;
   margin: 10px auto;
@@ -862,16 +865,15 @@ position: relative;
   cursor: pointer;
   display: flex;
   justify-content: center;
-
 }
 
-.BoxError{
-position: absolute;
-left: 1%;
-top: 2%;
+.BoxError {
+  position: absolute;
+  left: 1%;
+  top: 2%;
 }
 
-.msg{
+.msg {
   margin: 10px 0;
   color: rgb(236, 20, 20);
   font-size: 17px;
