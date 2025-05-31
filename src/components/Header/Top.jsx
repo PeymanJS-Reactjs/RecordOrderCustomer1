@@ -1,9 +1,7 @@
-
 import { Link } from "react-router-dom";
-import logo from "../Images/Logo.png"
+import logo from "../../Images/Logo.png";
 
 const TopHeader = (props) => {
-
   return (
     <div className="top">
       <div className="container">
@@ -25,7 +23,7 @@ const TopHeader = (props) => {
               }}
             >
               <Link to="/Register">
-              <i className="far fa-user"></i>
+                <i className="far fa-user"></i>
               </Link>
             </button>
           </div>
@@ -33,6 +31,6 @@ const TopHeader = (props) => {
       </div>
     </div>
   );
-}
- 
+};
+
 export default TopHeader;

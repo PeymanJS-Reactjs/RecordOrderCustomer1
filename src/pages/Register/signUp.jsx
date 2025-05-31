@@ -1,18 +1,16 @@
-import { useState , useContext , useRef } from "react";
+import { useState, useContext, useRef } from "react";
 import Sign from "./FormSign";
 import Loign from "./FormLoign";
-import { InfoUser } from "../ExternalModules/Contex";
+import { InfoUser } from "../../ExternalModules/Contex";
 import { Link, Outlet } from "react-router-dom";
 const Register = (props) => {
-
-  
-/* This useState is used to show HeaderRegister Component*/
+  /* This useState is used to show HeaderRegister Component*/
   const [showAlreadyAccount, setAlreadyAccount] = useState(true);
-  const { showError } = useContext(InfoUser)
-  const BoxError = useRef(null)
+  const { showError } = useContext(InfoUser);
+  const BoxError = useRef(null);
   const ChangeState = () => {
-    setAlreadyAccount(!showAlreadyAccount)
-  }
+    setAlreadyAccount(!showAlreadyAccount);
+  };
   return (
     <div className="contentDiv">
       <div className="backgroundDiv">
@@ -44,7 +42,7 @@ const Register = (props) => {
           }}
         >
           <Link to="/">
-            <i  className="fas fa-times"></i>
+            <i className="fas fa-times"></i>
           </Link>
         </div>
       </div>
@@ -53,16 +51,12 @@ const Register = (props) => {
           {showAlreadyAccount ? (
             <div className="headerRegister">
               <h2>Create Account</h2>
-              <p>
-                Create an account so you can explore all the existing product
-              </p>
+              <p>Create an account so you can explore all the existing product</p>
             </div>
           ) : (
             <div className="headerRegister">
               <h2>Login Account</h2>
-              <p>
-                Login to account so you can explore all the existing product
-              </p>
+              <p>Login to account so you can explore all the existing product</p>
             </div>
           )}
 

@@ -1,12 +1,11 @@
-
-import group1 from "../Images/Group1.png";
-import group2 from "../Images/Group2.png";
-import group3 from "../Images/Group3.png";
-import group4 from "../Images/Group4.png";
-import group5 from "../Images/Group5.png";
-import off1 from "../Images/Off1.png";
-import off2 from "../Images/Off2.png";
-import off3 from "../Images/Off3.png";
+import group1 from "../../Images/Group1.png";
+import group2 from "../../Images/Group2.png";
+import group3 from "../../Images/Group3.png";
+import group4 from "../../Images/Group4.png";
+import group5 from "../../Images/Group5.png";
+import off1 from "../../Images/Off1.png";
+import off2 from "../../Images/Off2.png";
+import off3 from "../../Images/Off3.png";
 
 const TopCatgory = () => {
   return (
@@ -84,8 +83,8 @@ const TopCatgory = () => {
                 <p>Summer Sale</p>
                 <p>Sale of the Month</p>
                 <div className="time">
-                  <div className="unit">00</div>:<div className="unit">02</div>:
-                  <div className="unit">18</div>:<div className="unit">46</div>
+                  <div className="unit">00</div>:<div className="unit">02</div>:<div className="unit">18</div>:
+                  <div className="unit">46</div>
                 </div>
                 <button className="btn">
                   <span> Shop now</span>

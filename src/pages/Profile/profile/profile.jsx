@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { InfoUser } from "../ExternalModules/Contex";
+import { InfoUser } from "../../../ExternalModules/Contex";
 const ProfileUser = () => {
   const { showError, fetchInfo, selectUser } = useContext(InfoUser);
   const endPonit = window.location.pathname;
