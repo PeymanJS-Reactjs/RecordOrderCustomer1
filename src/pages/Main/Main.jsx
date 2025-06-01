@@ -9,7 +9,7 @@ const Main = (props) => {
   return (
     <>
       <header style={{ marginBottom: "100px" }}>
-        <TopHeader show={props.show} changeShow={props.changeShow} />
+        <TopHeader />
         <MenuHeader />
         {/* <SliderHeader /> */}
         <FeatureHeader />

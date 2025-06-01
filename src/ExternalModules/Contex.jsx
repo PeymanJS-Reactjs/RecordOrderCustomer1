@@ -1,4 +1,3 @@
-
 import { useState, useEffect, createContext } from "react";
 
 export let InfoUser = createContext();
@@ -7,8 +6,8 @@ const ContexSlider = (props) => {
   // the useState is used to store validation info errors.
   const [showError, setShowError] = useState([]);
   // the useState is used to store userName give from server side.
-  const [username, setusername] = useState("");  
-//  the usestate is used to store select info user
+  const [username, setusername] = useState("");
+  //  the usestate is used to store select info user
   const [selectUser, setSelectUser] = useState([]);
   const [infoCustomer, setInfoCustomer] = useState({
     Name: "",
@@ -28,7 +27,7 @@ const ContexSlider = (props) => {
   const [Phone, setPhone] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  
+
   // These Functions are used to Change Values
   const HandleChangeName = (e) => {
     setName(e.target.value);
@@ -52,12 +51,9 @@ const ContexSlider = (props) => {
     setPassword(e.target.value);
   };
 
-
-
   // The function is used to Post infoCustomer for server
   const fetched = async () => {
     try {
-    
       const response = await fetch("http://localhost:3009/sendInfo", {
         method: "POST",
         headers: {
@@ -70,44 +66,40 @@ const ContexSlider = (props) => {
 
       if (typeof data.message === "string") {
         setShowError(data.message);
-        setusername(data.userName);  
+        setusername(data.userName);
       }
-           
+
       if (Array.isArray(data.message)) {
-        setShowError(data.message)
+        setShowError(data.message);
       }
-
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-
-  }
+  };
 
   // The function is used to Selecting infoCumstomer by username.
   const fetchInfo = async () => {
-    
     try {
       const responseInfo = await fetch("http://localhost:3009/Profile", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({username})
-      })
+        body: JSON.stringify({ username }),
+      });
 
       const dataInfo = await responseInfo.json();
       console.log(dataInfo.message);
       setSelectUser(dataInfo.content);
-      console.log(selectUser)
+      console.log(selectUser);
     } catch (e) {
-       console.log(e)
+      console.log(e);
     }
+  };
 
-  }
-
-    // Ready to sent Data to Server
+  // Ready to sent Data to Server
   const AddInfo = async () => {
-   await setInfoCustomer({
+    await setInfoCustomer({
       ...infoCustomer,
       Name: Name,
       Family: Family,
@@ -117,17 +109,16 @@ const ContexSlider = (props) => {
       Email: Email,
       Password: Password,
     });
-    };
-    
+  };
+
   useEffect(() => {
-      if (infoCustomer.Name.length !== 0) {
-        fetched()
-      }    
-    }, [infoCustomer]);
-    
-    useEffect(() => {
-    console.log("ShowError is now : " , showError) 
-                          
+    if (infoCustomer.Name.length !== 0) {
+      fetched();
+    }
+  }, [infoCustomer]);
+
+  useEffect(() => {
+    console.log("ShowError is now : ", showError);
   }, [showError]);
 
   return (

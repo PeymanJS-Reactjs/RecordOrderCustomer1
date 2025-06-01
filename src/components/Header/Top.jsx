@@ -18,8 +18,7 @@ const TopHeader = (props) => {
             <i className="fas fa-shopping-cart"></i>
             <button
               onClick={() => {
-                props.changeShow();
-                console.log(props.show);
+                // change show deleted
               }}
             >
               <Link to="/Register">

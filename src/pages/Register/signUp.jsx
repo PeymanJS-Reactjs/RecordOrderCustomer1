@@ -2,7 +2,7 @@ import { useState, useContext, useRef } from "react";
 import Sign from "./FormSign";
 import Loign from "./FormLoign";
 import { InfoUser } from "../../ExternalModules/Contex";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Register = (props) => {
   /* This useState is used to show HeaderRegister Component*/
   const [showAlreadyAccount, setAlreadyAccount] = useState(true);
@@ -35,12 +35,7 @@ const Register = (props) => {
             ))
           ) : null}
         </div>
-        <div
-          role="button"
-          onClick={() => {
-            props.changeShow();
-          }}
-        >
+        <div role="button" onClick={() => {}}>
           <Link to="/">
             <i className="fas fa-times"></i>
           </Link>

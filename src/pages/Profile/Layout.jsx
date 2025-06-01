@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 const Layout = () => {
   return (
-    <div className="container mx-auto py-20 flex gap-6">
+    <div className="px-[5%] py-20 flex gap-5">
       <Navbar />
       <div className="grow ">
         <Outlet />

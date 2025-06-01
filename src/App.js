@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import ContexSlider from "./ExternalModules/Contex";
 import Register from "./pages/Register/signUp";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -11,20 +10,24 @@ import Cart from "./pages/Profile/cart/OrderHistory";
 import Settings from "./pages/Profile/settings/Settings";
 import Logut from "./pages/Profile/logout/OrderHistory";
 function App() {
-  const [show, setShow] = useState(true);
+  // const [show, setShow] = useState(true);
 
-  const changeShow = () => {
-    setShow(!show);
-  };
-  useEffect(() => {}, [show]);
+  // const changeShow = () => {
+  //   setShow(!show);
+  // };
+  // useEffect(() => {
+  //   console.log("test");
+  // }, [show]);
+
+  // change show deleted
 
   return (
     <ContexSlider>
       <Router>
         <div id="container ">
           <Routes>
-            <Route path="/" element={<Main show={show} changeShow={changeShow} />} />
-            <Route path="Register" element={<Register show={show} changeShow={changeShow} />} />
+            <Route path="/" element={<Main />} />
+            <Route path="Register" element={<Register />} />
             <Route path="/profile" element={<Layout />}>
               <Route index element={"index page"} />
               <Route path="order_history" element={<OrderHistory />} />

@@ -1,5 +1,13 @@
+import AccountSettings from "./AccountSettings";
+import BillingAddress from "./BillingAddress";
+
 const Settings = () => {
-  return <div>Settings</div>;
+  return (
+    <>
+      <AccountSettings />
+      <BillingAddress />
+    </>
+  );
 };
 
 export default Settings;
