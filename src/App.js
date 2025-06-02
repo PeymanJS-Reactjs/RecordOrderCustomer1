@@ -9,6 +9,7 @@ import Wishlist from "./pages/Profile/wishlist/Wishlist";
 import Cart from "./pages/Profile/cart/OrderHistory";
 import Settings from "./pages/Profile/settings/Settings";
 import Logut from "./pages/Profile/logout/OrderHistory";
+import Profile from "./pages/Profile/profile/profile";
 function App() {
   // const [show, setShow] = useState(true);
 
@@ -29,7 +30,7 @@ function App() {
             <Route path="/" element={<Main />} />
             <Route path="Register" element={<Register />} />
             <Route path="/profile" element={<Layout />}>
-              <Route index element={"index page"} />
+              <Route index element={<Profile />} />
               <Route path="order_history" element={<OrderHistory />} />
               <Route path="wishlist" element={<Wishlist />} />
               <Route path="cart" element={<Cart />} />
