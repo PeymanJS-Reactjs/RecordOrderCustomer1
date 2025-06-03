@@ -1,10 +1,8 @@
 import TopHeader from "../../components/Header/Top";
 import MenuHeader from "../../components/Header/Menu";
-// import SliderHeader from "./Header/Slider";
 import FeatureHeader from "../../components/Header/Feature";
 import FeaturedProducts from "./Products";
 import TopCatgory from "./Catgory";
-import { Outlet } from "react-router-dom";
 const Main = (props) => {
   return (
     <>

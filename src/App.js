@@ -27,7 +27,8 @@ function App() {
         <div id="container ">
           <Routes>
             <Route path="/" element={<Main />} />
-            <Route path="Register" element={<Register />} />
+            {/* Please use lowercase url */}
+            <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Layout />}>
               <Route index element={"index page"} />
               <Route path="order_history" element={<OrderHistory />} />
