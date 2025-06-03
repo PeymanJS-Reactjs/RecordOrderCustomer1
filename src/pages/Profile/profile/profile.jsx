@@ -1,71 +1,29 @@
-import { useContext, useEffect } from "react";
-import { InfoUser } from "../../../ExternalModules/Contex";
-const ProfileUser = () => {
-  const { showError, fetchInfo, selectUser } = useContext(InfoUser);
-  const endPonit = window.location.pathname;
+import { Link } from "react-router-dom";
+import RecentOrder from "./RecentOrder";
 
-  useEffect(() => {
-    endPonit == "/Profile" && fetchInfo();
-  }, []);
-
-  console.log(endPonit);
+const Profile = () => {
   return (
-    <div className="profile">
-      <div className="infoPrivate">
-        <fieldset>
-          {selectUser.map((item) => {
-            <form>
-              <div className="leftForm">
-                <div className="control_form">
-                  <label>Name</label>
-                  <input type="text" value={item.name} />
-                </div>
-                <div className="control_form">
-                  <label>Family</label>
-                  <input type="text" value={item.family} />
-                </div>
-                <div className="control_form">
-                  <label>UserName</label>
-                  <input type="text" value={item.userName} />
-                </div>
-                <div className="control_form">
-                  <label>CodeNational</label>
-                  <input type="number" value={item.codeNational} />
-                </div>
-              </div>
-              <div className="RigthForm">
-                <div className="control_form">
-                  <label>Phone</label>
-                  <input type="text" value={item.number} />
-                </div>
-                <div className="control_form">
-                  <label>Email</label>
-                  <input type="text" value={item.email} />
-                </div>
-                <div className="control_form">
-                  <label>Password</label>
-                  <input type="text" value={item.password} />
-                </div>
-              </div>
-              <button
-                type="submit"
-                className="buttonForm"
-                onClick={(e) => {
-                  e.preventDefault();
-                }}
-              >
-                Sign up
-              </button>
-            </form>;
-          })}
-        </fieldset>
+    <div className='grid grid-cols-7 gap-5'>
+      <div className='border border-gray-100 p-8 col-span-4 rounded-lg flex justify-center items-center'>
+        <div className='text-center '>
+          <img src='/images/eProf.jpg' alt='profile' className='rounded-full object-cover size-32 border border-gray-50' />
+          <p className='text-xl mt-2'>Dianne Russell</p>
+          <p className='text-gray-500 mt-1 text-sm'>Customer</p>
+          <Link className='text-primary mt-2 block font-medium'>Edit Profile</Link>
+        </div>
       </div>
-      <div className="menu"></div>
-      <div className="bg-red-600 w-full rounded-full p-5">
-        <p className=" text-white ">hello word</p>
+      <div className='border border-gray-100 p-7 col-span-3 rounded-lg gap-1 flex flex-col '>
+        <p className='uppercase text-gray-400 text-sm font-medium'>Billing Address</p>
+        <p className='text-lg mt-4'>Dainne Russell</p>
+        <p className='text-gray-600 text-sm mt-2'>4140 Parker Rd. Allentown, New Mexico 31134</p>
+        <p className='mt-2'>dainne.ressell@gmail.com</p>
+        <p className='mt-2'>(671) 555-0110</p>
+        <Link className='text-primary mt-auto block font-medium'>Edit Address</Link>
       </div>
+
+      <RecentOrder />
     </div>
   );
 };
 
-export default ProfileUser;
+export default Profile;

@@ -8,28 +8,28 @@ const AccountSettings = () => {
           <label className="text-sm">First Name</label>
           <input
             type="text"
-            value={"Dianne"}
-            className="w-full border mt-1 mb-4 text-gray-600 rounded-md border-gray-100 p-3 outline-none focus:border-primary transition-all"
+            defaultValue={"Dianne"}
+            className="w-full border mt-1 mb-4 focus:text-gray-900  text-gray-600 rounded-md border-gray-100 p-3 outline-none focus:border-primary transition-all"
           />
           <label className="text-sm">Last Name</label>
           <input
             type="text"
-            value={"Russell"}
-            className="w-full border mt-1 mb-4 text-gray-600 rounded-md border-gray-100 p-3 outline-none focus:border-primary transition-all"
+            defaultValue={"Russell"}
+            className="w-full border mt-1 mb-4 focus:text-gray-900 text-gray-600 rounded-md border-gray-100 p-3 outline-none focus:border-primary transition-all"
           />
           <label className="text-sm">Email</label>
           <input
             type="text"
-            value={"dianne.russell@gmail.com"}
-            className="w-full border mt-1 mb-4 text-gray-600 rounded-md border-gray-100 p-3 outline-none focus:border-primary transition-all"
+            defaultValue={"dianne.russell@gmail.com"}
+            className="w-full border mt-1 mb-4 focus:text-gray-900 text-gray-600 rounded-md border-gray-100 p-3 outline-none focus:border-primary transition-all"
           />
           <label className="text-sm">Phone Number</label>
           <input
             type="text"
-            value={"(603) 555-0123"}
-            className="w-full border mt -1 mb-4 text-gray-600 rounded-md border-gray-100 p-3 outline-none focus:border-gray-300"
+            defaultValue={"(603) 555-0123"}
+            className="w-full border mt -1 mb-4 focus:text-gray-900 text-gray-600 rounded-md border-gray-100 p-3 outline-none focus:border-gray-300"
           />
-          <button className="px-7 py-3 text-sm rounded-full bg-primary hover:bg-primary/80 text-white">
+          <button className="px-7 py-2.5  text-sm rounded-full bg-primary hover:bg-primary/80 text-white">
             Save Changes
           </button>
         </div>
