@@ -10,6 +10,7 @@ import Cart from "./pages/Profile/cart/OrderHistory";
 import Settings from "./pages/Profile/settings/Settings";
 import Logut from "./pages/Profile/logout/OrderHistory";
 import Profile from "./pages/Profile/profile/profile";
+import OrderDetails from "./pages/Profile/orderHistory/orderDetails/OrderDetails";
 function App() {
   // const [show, setShow] = useState(true);
 
@@ -33,6 +34,7 @@ function App() {
             <Route path="/profile" element={<Layout />}>
               <Route index element={<Profile />} />
               <Route path="order_history" element={<OrderHistory />} />
+              <Route path="order_history/:orderId" element={<OrderDetails />} />
               <Route path="wishlist" element={<Wishlist />} />
               <Route path="cart" element={<Cart />} />
               <Route path="settings" element={<Settings />} />

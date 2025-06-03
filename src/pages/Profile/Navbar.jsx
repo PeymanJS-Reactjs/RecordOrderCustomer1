@@ -8,37 +8,38 @@ import { SlHandbag } from "react-icons/sl";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const pathname = useLocation().pathname;
+  const pathname = useLocation().pathname.split("/")[2] ?? "";
+  console.log(pathname);
 
   const paths = [
     {
       title: "Dashboard",
-      url: "/profile",
+      url: "",
       icon: BiSolidDashboard,
     },
     {
       title: "Order History",
-      url: "/profile/order_history",
+      url: "order_history",
       icon: LuRefreshCw,
     },
     {
       title: "Wishlist",
-      url: "/profile/wishlist",
+      url: "wishlist",
       icon: CiHeart,
     },
     {
       title: "Shpping Cart",
-      url: "/profile/cart",
+      url: "cart",
       icon: SlHandbag,
     },
     {
       title: "Settings",
-      url: "/profile/settings",
+      url: "settings",
       icon: IoSettingsOutline,
     },
     {
       title: "Log-out",
-      url: "/profile/logout",
+      url: "logout",
       icon: GrLogout,
     },
   ];
@@ -52,7 +53,9 @@ const Navbar = () => {
             to={item.url}
             key={item.url}
             className={`${
-              pathname === item.url ? "bg-gray-50 border-primary text-gray-900" : "text-gray-600 border-transparent hover:bg-gray-50"
+              pathname === item.url
+                ? "bg-gray-50 border-primary text-gray-900"
+                : "text-gray-600 border-transparent hover:bg-gray-50"
             } border-s-[3px] transition-all p-4 flex items-center gap-3`}
           >
             <item.icon

@@ -11,6 +11,12 @@
   font-family: "Rubik", sans-serif;
 }
 
+@layer components {
+  .btn {
+    @apply px-4 py-2 text-sm bg-primary/90 rounded-md outline-none text-white hover:bg-primary/80 transition-all active:bg-primary;
+  }
+}
+
 ul,
 h1,
 h2,
