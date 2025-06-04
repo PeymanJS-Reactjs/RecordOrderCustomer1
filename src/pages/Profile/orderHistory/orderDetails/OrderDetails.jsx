@@ -1,11 +1,14 @@
 import { Link, useParams } from "react-router-dom";
-import { orderHistory } from "../../../../constant";
-import { Circle, DotIcon } from "lucide-react";
+import { orderHistory, OrderProducts, OrderTrackerSteps } from "../../../../constant";
+import { DotIcon } from "lucide-react";
 import CheckoutSummary from "./CheckoutSummary";
+import OrderTracker from "./OrderTracker";
+import ProductSummary from "./ProductsSummary";
 
 const OrderDetails = () => {
   const { orderId } = useParams();
-
+  const OrderSteps = OrderTrackerSteps;
+  const orderProducts = OrderProducts;
   const order = orderHistory.find((r) => r.id === orderId);
 
   if (!order)
@@ -37,8 +40,10 @@ const OrderDetails = () => {
         </Link>
       </div>
 
-      <div className="p-5">
+      <div className="">
         <CheckoutSummary />
+        <OrderTracker steps={OrderSteps} />
+        <ProductSummary orders={orderProducts} />
       </div>
     </div>
   );

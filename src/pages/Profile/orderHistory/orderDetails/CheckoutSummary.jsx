@@ -9,7 +9,7 @@ export default function CheckoutSummary() {
   ];
 
   return (
-    <div className="mx-auto bg-white">
+    <div className="mx-auto p-5 bg-white">
       <div className="grid grid-cols-3 gap-7">
         <div className="flex col-span-2">
           {/* Billing Address */}

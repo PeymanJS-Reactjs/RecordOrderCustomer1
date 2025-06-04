@@ -84,3 +84,34 @@ export const orderHistory = [
     status: "Completed",
   },
 ];
+
+export const OrderTrackerSteps = [
+  { id: 1, name: "Order received", status: "completed" },
+  { id: 2, name: "Processing", status: "current" },
+  { id: 3, name: "On the way", status: "upcoming" },
+  { id: 4, name: "Delivered", status: "upcoming" },
+];
+
+export const OrderProducts = [
+  {
+    name: "Red Capsicum",
+    image: "/images/product/red-capsicum.png",
+    price: 14.0,
+    quantity: 5,
+    subtotal: 70.0,
+  },
+  {
+    name: "Green Capsicum",
+    image: "/images/product/green-capsicum.png",
+    price: 14.0,
+    quantity: 2,
+    subtotal: 28.0,
+  },
+  {
+    name: "Green Chili",
+    image: "/images/product/green-chili.png",
+    price: 26.7,
+    quantity: 10,
+    subtotal: 267.0,
+  },
+];
