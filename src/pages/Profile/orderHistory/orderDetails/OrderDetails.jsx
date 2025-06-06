@@ -9,16 +9,16 @@ const OrderDetails = () => {
   const { orderId } = useParams();
   const OrderSteps = OrderTrackerSteps;
   const orderProducts = OrderProducts;
-  const order = orderHistory.find((r) => r.id === orderId);
+  const order = orderHistory.find(r => r.id === orderId);
 
   if (!order)
     return (
-      <div className="border border-gray-100 col-span-7 rounded-lg h-full ">
-        <h3 className="p-5 border-b flex border-gray-100 text-lg w-full items-center font-medium">Order Details</h3>
+      <div className='border border-gray-100 rounded-lg h-full '>
+        <h3 className='p-5 md:border-b flex border-gray-100 text-lg w-full items-center font-medium'>Order Details</h3>
 
-        <div className="flex items-center flex-col h-2/3 justify-center gap-2">
-          <p className="text-gray-700 text-lg mx-auto text-center">Order ID not found or invalid.</p>
-          <Link to={"../"} className="btn mx-auto text-center">
+        <div className='flex items-center flex-col h-2/3 justify-center gap-2'>
+          <p className='text-gray-700 text-lg mx-auto text-center'>Order ID not found or invalid.</p>
+          <Link to={"../"} className='btn mx-auto text-center'>
             Back to Profile
           </Link>
         </div>
@@ -26,21 +26,25 @@ const OrderDetails = () => {
     );
 
   return (
-    <div className="border border-gray-100 col-span-7 rounded-lg">
-      <div className="p-5 border-b border-gray-100 w-full text-gray-700  flex items-center">
-        <h3 className="font-medium  text-xl text-gray-900">Order Details</h3>
-        <DotIcon className="text-inherit" />
-        <p className="text-sm text-inherit">{order.date}</p>
-        <DotIcon className="text-inherit" />
-        <p className="text-sm font-normal text-inherit">
-          {order.productCount} Product{order.productCount !== 1 ? "s" : ""}
-        </p>
-        <Link to={"../order_history"} className="text-primary ml-auto">
+    <div className='md:border border-gray-100 rounded-lg'>
+      <div className='p-5 md:border-b border-gray-100 w-full text-gray-700  flex items-center'>
+        <div className="flex flex-col sm:flex-row">
+          <h3 className='font-medium  text-xl text-gray-900'>Order Details</h3>
+          <div className="flex flex-row items-center">
+            <DotIcon className='text-inherit hidden sm:inline-block ' />
+            <p className='text-sm text-inherit'>{order.date}</p>
+            <DotIcon className='text-inherit' />
+            <p className='text-sm font-normal text-inherit'>
+              {order.productCount} Product{order.productCount !== 1 ? "s" : ""}
+            </p>
+          </div>
+        </div>
+        <Link to={"../order_history"} className='text-primary ml-auto'>
           Back to List
         </Link>
       </div>
 
-      <div className="">
+      <div className=''>
         <CheckoutSummary />
         <OrderTracker steps={OrderSteps} />
         <ProductSummary orders={orderProducts} />

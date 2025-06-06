@@ -1,3 +1,43 @@
+import { BiSolidDashboard } from "react-icons/bi";
+import { CiHeart } from "react-icons/ci";
+import { GrLogout } from "react-icons/gr";
+import { IoSettingsOutline } from "react-icons/io5";
+import { LuRefreshCw } from "react-icons/lu";
+import { SlHandbag } from "react-icons/sl";
+
+export const profilePaths = [
+  {
+    title: "Dashboard",
+    url: "",
+    icon: BiSolidDashboard,
+  },
+  {
+    title: "Order History",
+    url: "order_history",
+    icon: LuRefreshCw,
+  },
+  {
+    title: "Wishlist",
+    url: "wishlist",
+    icon: CiHeart,
+  },
+  {
+    title: "Shpping Cart",
+    url: "cart",
+    icon: SlHandbag,
+  },
+  {
+    title: "Settings",
+    url: "settings",
+    icon: IoSettingsOutline,
+  },
+  {
+    title: "Log-out",
+    url: "logout",
+    icon: GrLogout,
+  },
+];
+
 export const orderHistory = [
   {
     id: "3933",

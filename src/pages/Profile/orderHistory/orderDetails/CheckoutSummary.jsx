@@ -9,11 +9,11 @@ export default function CheckoutSummary() {
   ];
 
   return (
-    <div className="mx-auto p-5 bg-white">
-      <div className="grid grid-cols-3 gap-7">
-        <div className="flex col-span-2">
+    <div className="mx-auto md:p-5 bg-white">
+      <div className="grid md:grid-cols-3 gap-7">
+        <div className="flex sm:flex-row flex-col gap-y-2 md:col-span-2">
           {/* Billing Address */}
-          <div className=" border border-r-0 border-gray-100 rounded-l-md">
+          <div className="grow border sm:border-r-0 border-gray-100 rounded-md sm:rounded-r-none">
             <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wide p-5 border-b border-gray-100">
               BILLING ADDRESS
             </h3>
@@ -37,7 +37,7 @@ export default function CheckoutSummary() {
           </div>
 
           {/* Shipping Address */}
-          <div className=" border border-gray-100 rounded-r-md">
+          <div className=" border grow border-gray-100 rounded-md sm:rounded-l-none">
             <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wide p-5 border-b border-gray-100">
               SHIPPING ADDRESS
             </h3>
@@ -62,7 +62,7 @@ export default function CheckoutSummary() {
         </div>
 
         {/* Order Summary */}
-        <div className="border border-gray-100 rounded-md col-span-1">
+        <div className="border border-gray-100 rounded-md col-span-1 w-full">
           <OrderSummary orderId="#4152" paymentMethod="Paypal" items={orderItems} />
         </div>
       </div>

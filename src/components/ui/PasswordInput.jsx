@@ -10,14 +10,15 @@ const PasswordInput = ({ className, placeholder = "" }) => {
     <div className='relative'>
       <input
         className={cn(
-          "w-full border mt-1 text-gray-600 focus:text-gray-900 rounded-md border-gray-100 p-3 outline-none focus:border-primary transition-all",
+          "w-full h-full border mt-1 text-gray-600 overflow-hidden focus:text-gray-900 rounded-md border-gray-100 p-3 outline-none focus:border-primary transition-all",
           className
         )}
         type={type}
         placeholder={placeholder}
       />
-      <div className='absolute right-3 top-0 h-full w-fit flex justify-center items-center text-gray-800'>
-        <button
+      <div className='absolute overflow-hidden right-0 top-0 h-full w-12 flex justify-center items-center text-gray-800'>
+        <button 
+        className=" bg-white"
         onMouseDown={e => e.preventDefault()}
           onClick={() => {
             if (type === "password") setType("text");

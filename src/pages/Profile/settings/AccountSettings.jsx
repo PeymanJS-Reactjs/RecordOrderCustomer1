@@ -1,9 +1,9 @@
 const AccountSettings = () => {
   return (
-    <section className="rounded-lg mb-6 border border-gray-100">
-      <h3 className="p-5 border-b border-gray-100 text-lg font-medium">Account Settings</h3>
-      <div className="p-5 grid grid-cols-5 gap-2">
-        <div className="col-span-3">
+    <section className="rounded-lg mb-6 md:border border-gray-100">
+      <h3 className="p-4 md:border-b border-gray-100 text-lg font-medium">Account Settings</h3>
+      <div className="p-5 grid md:grid-cols-5 gap-2">
+        <div className="md:col-span-3">
           {/* left */}
           <label className="text-sm">First Name</label>
           <input
@@ -33,7 +33,7 @@ const AccountSettings = () => {
             Save Changes
           </button>
         </div>
-        <div className="flex text-center items-center justify-center grow col-span-2">
+        <div className="flex text-center items-center justify-center grow md:col-span-2 -order-1 md:order-2">
           <div className="pb-10">
             <img
               src="/images/eProf.jpg"

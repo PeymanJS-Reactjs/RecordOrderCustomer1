@@ -32,7 +32,7 @@ const OrderTracker = ({ steps }) => {
                   : r.status === "current"
                   ? "text-primary-hard font-medium"
                   : " text-gray-800"
-              } absolute mt-10 text-sm text-nowrap`}
+              } absolute mt-10 text-xs sm:text-sm text-nowrap`}
             >
               {r.name}
             </p>
